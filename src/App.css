@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@font-face {
+  font-display: swap;
+  font-family: 'Livvic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/Fonts/livvic-v14-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Livvic';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/Fonts/livvic-v14-latin-500.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Livvic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/Fonts/livvic-v14-latin-700.woff2') format('woff2'); 
+}
+
+:root{
+  --color-main:#bc8e5b;
+}
+
+body{
+  font-family: "livvic", sans-serif ;
+  background-color: #f1f0ee;
+}
+.main-color{
+  color: var(--color-main);
+}
+.ant-input-outlined :focus-within{
+  box-shadow: 0 0 0 2px  #bc8f5b42;
+}
+.ant-btn-primary{
+  background-color:var(--color-main) !important;
+}
+.ant-input-affix-wrapper:hover{
+  border-color: var(--color-main) !important;
+}
+.ant-input-affix-wrapper-focused{
+  border-color: var(--color-main) !important;
+}
+
+.ant-btn:hover{
+  color: var(--color-main) !important;
+  border-color:var(--color-main)  !important;
+}
+.ant-btn-primary:hover{
+  color: white !important;
+  opacity: 80% !important;
+}
