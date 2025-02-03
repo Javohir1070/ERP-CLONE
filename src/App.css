@@ -30,19 +30,19 @@ body{
   font-family: "livvic", sans-serif ;
   background-color: #f1f0ee;
 }
-.main-color{
-  color: var(--color-main);
+.main-color, .ant-spin-dot-holder{
+  color: var(--color-main) !important;
 }
 .ant-input-outlined :focus-within{
   box-shadow: 0 0 0 2px  #bc8f5b42;
 }
-.ant-btn-primary{
+.ant-btn-primary, .ant-menu-item-selected{
   background-color:var(--color-main) !important;
 }
 .ant-input-affix-wrapper:hover{
   border-color: var(--color-main) !important;
 }
-.ant-input-affix-wrapper-focused{
+.ant-input-affix-wrapper-focused, .ant-input:hover, .ant-input:focus, .ant-select-selector:hover, .ant-select-selector:focus{
   border-color: var(--color-main) !important;
 }
 
@@ -53,4 +53,30 @@ body{
 .ant-btn-primary:hover{
   color: white !important;
   opacity: 80% !important;
+}
+a{
+  font-family: "Livvic", sans-serif;
+}
+.main-logo{
+  animation-name: logo;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes logo{
+  0%{
+      transform: scale(2) rotateY();
+  }
+  100%{
+    transform: scale(3.5) rotateY(180deg);
+  }
+}
+
+.ant-pagination-item-active{
+  border-color: var(--color-main) !important;
+  color: var(--color-main) !important;
+}
+.ant-pagination-item-active > a{
+  color: var(--color-main) !important;
 }

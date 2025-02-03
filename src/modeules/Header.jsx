@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Logo} from "../assets/icons"
-import { BellOutlined, InfoCircleOutlined, LogoutOutlined, MenuFoldOutlined } from '@ant-design/icons'
+import { BellOutlined, InfoCircleOutlined, LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Badge, Button, Modal, Tooltip } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import GetToken from "../hooks/GetToken"
@@ -8,7 +8,7 @@ import GetToken from "../hooks/GetToken"
 const Header = () => {
     const [logOut, setLogOut] = useState(false)
     const [isLoading, setIsloading] = useState(false)
-    const {setToken} = GetToken()
+    const {setToken, collapsed, setCollapsed } = GetToken()
     const navigate = useNavigate()
 
     function handleLogOut(){
@@ -22,12 +22,12 @@ const Header = () => {
     }
   return (
     <div className='flex items-center justify-between bg-[#01152a]'>
-        <div className='w-[22%] flex items-center gap-5 p-4 main-color'>
+        <div className={`w-[22%] ${collapsed ? "w-[100px]" : "w-[22%]"} flex items-center gap-5 p-4 main-color`}>
             <Logo/>
-            <span className='text-white text-[20px]' >Administratsita</span>
+            <span className={`text-white ${collapsed && "hidden opacity-0"} text-[20px]` }>Administratsita</span>
         </div>
-        <div className='w-[78%] flex items-center justify-between text-white px-[10px]'>
-            <MenuFoldOutlined className='text-[28px]'/>
+        <div className={` ${collapsed ? "w-full" : "w-[78%]"} flex items-center justify-between text-white px-[10px]`}>
+            <button onClick={() => setCollapsed(!collapsed)}> {collapsed ? <MenuUnfoldOutlined className='text-[28px]'/> :  <MenuFoldOutlined className='text-[28px]'/>}</button>
             <div className='flex gap-5'>
                 <Tooltip placement='bottom' title={"Oxirgi ma'lumot yangilanish vaqti: 2 Fev, 2025 00:05"}>
                     <Button size='middle' icon={<InfoCircleOutlined/>} iconPosition='left' type='default' >Sinxronlash</Button>
@@ -41,7 +41,7 @@ const Header = () => {
                 </button>
             </div>
         </div>
-        <Modal confirmLoading={isLoading} open={logOut} onCancel={() => setLogOut(false)} onOk={handleLogOut} title="Chiqish">
+        <Modal  confirmLoading={isLoading} open={logOut} onCancel={() => setLogOut(false)} onOk={handleLogOut} title="Chiqish">
             <p className='text-[16px]'>Siz aniq chiqishni hohlaysizmi</p>
         </Modal>
     </div>

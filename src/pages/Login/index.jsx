@@ -57,7 +57,7 @@ const Login = () => {
               },
             ]}
           >
-            <Input  autoComplete="current-password" size='large' prefix={<LockOutlined />} type="password" placeholder="Parol" />
+            <Input.Password  autoComplete="current-password" size='large' prefix={<LockOutlined />} type="password" placeholder="Parol" />
           </Form.Item>
           <Button loading={loading} className='w-full' size='large' htmlType='submit' type='primary'>Kirish </Button>
             </Form>

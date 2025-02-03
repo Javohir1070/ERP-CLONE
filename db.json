@@ -4,5 +4,113 @@
             "username":"Javohir",
             "password":"Javohir123"
         }
+    ],
+    "categories":[
+        {
+            "id":1,
+            "path":"/",
+            "title":"Asosiy"
+        },
+        {
+            "id":2,
+            "path":"/techesrs",
+            "title":"Ustozlar"
+        },
+        {
+            "id":3,
+            "path":"/students",
+            "title":"O'quvchilar"
+        },
+        {
+            "id":4,
+            "path":"/groups",
+            "title":"Guruhlar"
+        },
+        {
+            "id":5,
+            "path":"/market",
+            "title":"Do'kon"
+        }
+    ],
+    "teachers":[
+        {
+            "id":1,
+            "name":"Javohir",
+            "surname":"Botirov",
+            "age":23,
+            "stack":"Frontend Developer",
+            "region":"Tashkent",
+            "status":"Seller",
+            "experience":"4",
+            "gender":"male",
+            "email":"yu79b98j2002@gmail.com",
+            "phone":"+998998651070",
+            "isMerried":false,
+            "study":"TATU",
+            "workCompany":["OpenAI", "Google"]
+        },
+        {
+            "id":2,
+            "name":"Bobur",
+            "surname":"Anarbayev",
+            "age":33,
+            "stack":"Backend Developer",
+            "region":"Tashkent",
+            "status":"Seller",
+            "experience":"7",
+            "gender":"male",
+            "email":"bobur0333@gmail.com",
+            "phone":"+998946011512",
+            "isMerried":true,
+            "study":"TMC",
+            "workCompany":["Windows", "Payme"]
+        },
+        {
+            "id":3,
+            "name":"Abdurazzoq",
+            "surname":"Abdullayev",
+            "age":20,
+            "stack":"Full Stack Developer",
+            "region":"Tashkent",
+            "status":"Programmist",
+            "experience":"3",
+            "gender":"male",
+            "email":"abshay0333@gmail.com",
+            "phone":"+998977777777",
+            "isMerried":false,
+            "study":"NarXoz",
+            "workCompany":["Click", "Olcha"]
+        }
+    ],
+    "stack":[
+        {
+            "id":"1",
+            "name":"Frontend"
+        },
+        {
+            "id":"2",
+            "name":"Backend"
+        },
+        {
+            "id":"3",
+            "name":"Full Stack"
+        },
+        {
+            "id":"4",
+            "name":"Graphic design"
+        },
+        {
+            "id":"5",
+            "name":"Flutter"
+        },
+        {
+            "id":"6",
+            "name":"Java"
+        },
+        {
+            "id":"7",
+            "name":"Foundation"
+        }
     ]
+
 }

@@ -4,8 +4,8 @@ import { useContext } from 'react'
 import { Context } from "../context/Context"
 
 const GetToken = () => {
-    const {token, setToken} = useContext(Context)
-  return { token, setToken }
+    const {token, setToken, collapsed, setCollapsed} = useContext(Context)
+  return { token, setToken, collapsed, setCollapsed }
 }
 
 export default GetToken
