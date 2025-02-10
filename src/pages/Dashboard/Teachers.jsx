@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import Caption from "../../components/Caption"
-import { LineOutlined, MoreOutlined, UserAddOutlined } from '@ant-design/icons'
-import { Button, Input, Select } from 'antd'
-import FilterStack from '../../components/FilterStack'
-import { instance } from '../../hooks/instance'
+import {  UserAddOutlined } from '@ant-design/icons'
+import {  Input  } from 'antd'
 import CustomTable from '../../components/CustomTable'
+import {PATH} from "../../hooks/path"
+import FilterCustom from '../../components/FilterCustom'
+import { getTeachers } from '../../service/GetTeachers'
 
 const Teachers = () => {
   const [stackId, setStackId] = useState(null)
@@ -14,7 +15,7 @@ const Teachers = () => {
   const columns = [
     {
       title:"ID",
-      dataIndex: "id"
+      dataIndex: "key"
     },
     {
       title:"Ustoz ismi",
@@ -61,29 +62,19 @@ const Teachers = () => {
   }
 
   // Search Part
-  useEffect(() => {
-      instance().get("/teachers").then(res => {
-       setTeachers( res.data.map((item, index) => {
-        item.key = index
-        item.name = item.name ? item.name : <LineOutlined/>
-        item.age = item.age ? item.age : <LineOutlined/>
-        item.stack = item.stack ? item.stack : <LineOutlined/>
-        item.action = <Button className='w-[32px] h-[32px]' type='primary' size='middle'><MoreOutlined className='rotate-90'/></Button>
-        return item
-      }))
-      })
-  },[refresh])
+  getTeachers(stackId, refresh, setTeachers, teachers)
+
   return (
     <div className='p-5'>
-      <Caption title={"Ustozlar"} icon={<UserAddOutlined/>} count={3}/>
+      <Caption addLink={PATH.teachersAdd} title={"Ustozlar"} icon={<UserAddOutlined/>} count={3}/>
       <div className='mt-5 flex gap-10'>
           <label className='flex flex-col'>
             <span className='text-[15px] text-slate-400 pl-1 mb-1'>Qidirish</span>
-            <Input onChange={handleSearchByName} className='!w-[350px]' size='large' placeholder='Qidirish...'/>
+            <Input onChange={handleSearchByName} className='!w-[350px]' size='large' allowClear placeholder='Qidirish...'/>
           </label>
           <label className='flex flex-col'>
             <span className='text-[15px] text-slate-400 pl-1 mb-1'>Choose stack</span>
-            <FilterStack stackId={stackId} setStackId={setStackId}/>
+            <FilterCustom API={"/stack"} filterId={stackId} setFilterId={setStackId} extraClass={'w-[350px]'} placeholder={"Stackni tanlang"}/>
           </label>
       </div>
       <div className='mt-5'>

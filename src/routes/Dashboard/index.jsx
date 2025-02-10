@@ -1,12 +1,12 @@
 import React from 'react'
-import { dashboardRoutesList } from '../../hooks/routes'
+import { dashboarRouteList } from '../../hooks/routes'
 import { Route, Routes } from 'react-router-dom'
 import DashboardLeyaut from '../../features'
 
 const DashboardRoutes = () => {
   return (
     <DashboardLeyaut>
-      <Routes> {dashboardRoutesList.map(item => <Route key={item.id} path={item.path} element={item.element}/>)} </Routes>
+      <Routes> {dashboarRouteList.map(item => <Route key={item.id} path={item.path} element={item.element}/>)} </Routes>
     </DashboardLeyaut>
   )
 }

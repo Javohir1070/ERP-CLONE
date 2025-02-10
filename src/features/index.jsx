@@ -8,7 +8,7 @@ const DashboardLeyaut = ({children}) => {
     <Header/>
     <div className='flex items-center '>
         <Navbar/>
-        <div className='w-[80%] h-[100vh] overflow-y-auto'>
+        <div className='w-[80%] h-[89vh] overflow-y-auto'>
             {children}
         </div>
     </div>

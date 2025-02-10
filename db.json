@@ -1,116 +1,367 @@
 {
-    "users":[
-        {
-            "username":"Javohir",
-            "password":"Javohir123"
-        }
-    ],
-    "categories":[
-        {
-            "id":1,
-            "path":"/",
-            "title":"Asosiy"
-        },
-        {
-            "id":2,
-            "path":"/techesrs",
-            "title":"Ustozlar"
-        },
-        {
-            "id":3,
-            "path":"/students",
-            "title":"O'quvchilar"
-        },
-        {
-            "id":4,
-            "path":"/groups",
-            "title":"Guruhlar"
-        },
-        {
-            "id":5,
-            "path":"/market",
-            "title":"Do'kon"
-        }
-    ],
-    "teachers":[
-        {
-            "id":1,
-            "name":"Javohir",
-            "surname":"Botirov",
-            "age":23,
-            "stack":"Frontend Developer",
-            "region":"Tashkent",
-            "status":"Seller",
-            "experience":"4",
-            "gender":"male",
-            "email":"yu79b98j2002@gmail.com",
-            "phone":"+998998651070",
-            "isMerried":false,
-            "study":"TATU",
-            "workCompany":["OpenAI", "Google"]
-        },
-        {
-            "id":2,
-            "name":"Bobur",
-            "surname":"Anarbayev",
-            "age":33,
-            "stack":"Backend Developer",
-            "region":"Tashkent",
-            "status":"Seller",
-            "experience":"7",
-            "gender":"male",
-            "email":"bobur0333@gmail.com",
-            "phone":"+998946011512",
-            "isMerried":true,
-            "study":"TMC",
-            "workCompany":["Windows", "Payme"]
-        },
-        {
-            "id":3,
-            "name":"Abdurazzoq",
-            "surname":"Abdullayev",
-            "age":20,
-            "stack":"Full Stack Developer",
-            "region":"Tashkent",
-            "status":"Programmist",
-            "experience":"3",
-            "gender":"male",
-            "email":"abshay0333@gmail.com",
-            "phone":"+998977777777",
-            "isMerried":false,
-            "study":"NarXoz",
-            "workCompany":["Click", "Olcha"]
-        }
-    ],
-    "stack":[
-        {
-            "id":"1",
-            "name":"Frontend"
-        },
-        {
-            "id":"2",
-            "name":"Backend"
-        },
-        {
-            "id":"3",
-            "name":"Full Stack"
-        },
-        {
-            "id":"4",
-            "name":"Graphic design"
-        },
-        {
-            "id":"5",
-            "name":"Flutter"
-        },
-        {
-            "id":"6",
-            "name":"Java"
-        },
-        {
-            "id":"7",
-            "name":"Foundation"
-        }
-    ]
-
+  "users": [
+    {
+      "username": "Javohir",
+      "password": "Javohir123",
+      "id": "a025"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "path": "/",
+      "title": "Asosiy"
+    },
+    {
+      "id": "2",
+      "path": "/techesrs",
+      "title": "Ustozlar"
+    },
+    {
+      "id": "3",
+      "path": "/students",
+      "title": "O'quvchilar"
+    },
+    {
+      "id": "4",
+      "path": "/groups",
+      "title": "Guruhlar"
+    },
+    {
+      "id": "5",
+      "path": "/market",
+      "title": "Do'kon"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Javohir",
+      "surname": "Botirov",
+      "age": "30",
+      "stackId": "6",
+      "stack": "Java",
+      "region": "Andijon",
+      "regionId": "4",
+      "district": "Oq Oltin",
+      "status": "Asosiy Ustoz",
+      "statusId": "1",
+      "experience": "4",
+      "gender": "male",
+      "email": "yu79b98j2002@gmail.com",
+      "phone": "+998998651070",
+      "isMerried": false,
+      "study": "TATU",
+      "workCompany": [
+        "Tesla",
+        "TikTok",
+        "Microsoft",
+        "Open AI",
+        "Telegram"
+      ],
+      "workCompanyId": [
+        "6",
+        "3",
+        "8",
+        "4",
+        "5"
+      ],
+      "id": "1"
+    },
+    {
+      "name": "Bobur0133",
+      "surname": "Anarbayev",
+      "age": 33,
+      "stackId": "4",
+      "stack": "Graphic design",
+      "region": "Buxoro",
+      "regionId": "10",
+      "district": "Erkin",
+      "status": "Bosh Ustoz",
+      "statusId": "4",
+      "experience": "7",
+      "gender": "male",
+      "email": "bobur0333@gmail.com",
+      "phone": "+998911620333",
+      "isMerried": true,
+      "study": "TMC",
+      "workCompany": [
+        "Facebook",
+        "Telegram"
+      ],
+      "workCompanyId": [
+        2,
+        5
+      ],
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Abdurazzoq",
+      "surname": "Abdullayev",
+      "age": 20,
+      "stack": "Full Stack Developer",
+      "stackId": "3",
+      "region": "Samarqand",
+      "regionId": "7",
+      "district": "Gulzor",
+      "status": "Boshqaruvchi Ustoz",
+      "statusId": "3",
+      "experience": "3",
+      "gender": "male",
+      "email": "abshay0333@gmail.com",
+      "phone": "+998977777777",
+      "isMerried": false,
+      "study": "NarXoz",
+      "workCompany": [
+        "Microsoft",
+        "Olcha"
+      ],
+      "workCompanyId": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "58d0",
+      "name": "Nursulton",
+      "surname": "Qodirov",
+      "age": "20",
+      "stackId": "1",
+      "stack": "Frontend",
+      "region": "Toshkent",
+      "regionId": "1",
+      "district": "Olmazor",
+      "status": "Yordamchi Ustoz",
+      "statusId": "2",
+      "experience": "2 yil",
+      "gender": "Erkak",
+      "email": "Nursulton@gmail.com",
+      "phone": "998997777777",
+      "isMerried": "Yoq",
+      "study": "Tatu",
+      "workCompany": [
+        "Google"
+      ],
+      "workCompanyId": [
+        "1"
+      ]
+    },
+    {
+      "id": "9987",
+      "name": "Aziz",
+      "surname": "Alisherov",
+      "age": "27",
+      "stackId": "2",
+      "stack": "Backend",
+      "region": "Namangan",
+      "regionId": "3",
+      "district": "Izboskan",
+      "status": "Asosiy Ustoz",
+      "statusId": "1",
+      "experience": "3yil",
+      "gender": "Erkak",
+      "email": "Alisherov@gmail.com",
+      "phone": "998994444322",
+      "isMerried": "ha",
+      "study": "West",
+      "workCompany": [
+        "Najot Ta'lim"
+      ],
+      "workCompanyId": [
+        "9"
+      ]
+    },
+    {
+      "id": "dd24",
+      "name": "ddd",
+      "surname": "adasd",
+      "age": "22",
+      "stackId": "3",
+      "stack": "Full Stack",
+      "region": "Farg'ona",
+      "regionId": "2",
+      "district": "adasdas",
+      "status": "Asosiy Ustoz",
+      "statusId": "1",
+      "experience": "sadasdasd",
+      "gender": "Erkak",
+      "email": "asdasdasd@gmail.com",
+      "phone": "998234234324",
+      "isMerried": "das",
+      "study": "asdasd",
+      "workCompany": [
+        "Apple"
+      ],
+      "workCompanyId": [
+        "7"
+      ]
+    },
+    {
+      "name": "Alisherr",
+      "surname": "Qodirov",
+      "age": "40",
+      "stackId": "1",
+      "stack": "Frontend",
+      "region": "Toshkent",
+      "regionId": "1",
+      "district": "Olmazor",
+      "status": "Asosiy Ustoz",
+      "statusId": "1",
+      "experience": "8yil",
+      "gender": "Erkak",
+      "email": "Qodirov@gmail.com",
+      "phone": "998994444322",
+      "isMerried": "ha",
+      "study": "TMC",
+      "workCompany": [
+        "Facebook",
+        "Google"
+      ],
+      "workCompanyId": [
+        "2",
+        "1"
+      ],
+      "id": "0e04"
+    }
+  ],
+  "stack": [
+    {
+      "id": "1",
+      "name": "Frontend"
+    },
+    {
+      "id": "2",
+      "name": "Backend"
+    },
+    {
+      "id": "3",
+      "name": "Full Stack"
+    },
+    {
+      "id": "4",
+      "name": "Graphic design"
+    },
+    {
+      "id": "5",
+      "name": "Flutter"
+    },
+    {
+      "id": "6",
+      "name": "Java"
+    },
+    {
+      "id": "7",
+      "name": "Foundation"
+    }
+  ],
+  "regions": [
+    {
+      "id": "1",
+      "name": "Toshkent"
+    },
+    {
+      "id": "2",
+      "name": "Farg'ona"
+    },
+    {
+      "id": "3",
+      "name": "Namangan"
+    },
+    {
+      "id": "4",
+      "name": "Andijon"
+    },
+    {
+      "id": "5",
+      "name": "Sirdaryo"
+    },
+    {
+      "id": "6",
+      "name": "Jizzax"
+    },
+    {
+      "id": "7",
+      "name": "Samarqand"
+    },
+    {
+      "id": "8",
+      "name": "Qashqadaryo"
+    },
+    {
+      "id": "9",
+      "name": "Surxondaryo"
+    },
+    {
+      "id": "10",
+      "name": "Buxoro"
+    },
+    {
+      "id": "11",
+      "name": "Xorazm"
+    },
+    {
+      "id": "12",
+      "name": "Navoiy"
+    }
+  ],
+  "status": [
+    {
+      "id": "1",
+      "name": "Asosiy Ustoz"
+    },
+    {
+      "id": "2",
+      "name": "Yordamchi Ustoz"
+    },
+    {
+      "id": "3",
+      "name": "Boshqaruvchi Ustoz"
+    },
+    {
+      "id": "4",
+      "name": "Bosh Ustoz"
+    }
+  ],
+  "workList": [
+    {
+      "id": "1",
+      "name": "Google"
+    },
+    {
+      "id": "2",
+      "name": "Facebook"
+    },
+    {
+      "id": "3",
+      "name": "TikTok"
+    },
+    {
+      "id": "4",
+      "name": "Open AI"
+    },
+    {
+      "id": "5",
+      "name": "Telegram"
+    },
+    {
+      "id": "6",
+      "name": "Tesla"
+    },
+    {
+      "id": "7",
+      "name": "Apple"
+    },
+    {
+      "id": "8",
+      "name": "Microsoft"
+    },
+    {
+      "id": "9",
+      "name": "Najot Ta'lim"
+    },
+    {
+      "id": "10",
+      "name": "Kahoot"
+    }
+  ]
 }

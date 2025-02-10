@@ -1,8 +1,8 @@
 import React from 'react'
 import { PATH } from "../hooks/path"
-import { Groups, Home, Market, Students, Teachers } from "../pages/Dashboard"
+import { Groups, Home, Market, Students, Teachers, TeachersCrud, TeachersMore } from "../pages/Dashboard"
 import { CodeSandboxOutlined, HomeOutlined, ShoppingCartOutlined, UserOutlined, UsergroupAddOutlined } from '@ant-design/icons'
-export const  dashboardRoutesList = [
+export const  dashboardNavList = [
     {
         id:1,
         path:PATH.home,
@@ -12,7 +12,7 @@ export const  dashboardRoutesList = [
     },
     {
         id:2,
-        path:PATH.techesrs,
+        path:PATH.teachers,
         element:<Teachers/>,
         title:"Ustozlar",
         icon:<UserOutlined  className='!text-[22px]'/>
@@ -37,5 +37,48 @@ export const  dashboardRoutesList = [
         element:<Market/>,
         title:"Do'kon",
         icon:<ShoppingCartOutlined className='!text-[22px]'/>
+    },
+]
+
+export const  dashboarRouteList = [
+    {
+        id:1,
+        path:PATH.home,
+        element:<Home/>,
+    },
+    {
+        id:2,
+        path:PATH.teachers,
+        element:<Teachers/>,
+    },
+    {
+        id:3,
+        path:PATH.students,
+        element:<Students/>,
+    },
+    {
+        id:4,
+        path:PATH.groups,
+        element:<Groups/>,
+    },
+    {
+        id:5,
+        path:PATH.market,
+        element:<Market/>,
+    },
+    {
+        id:6,
+        path:PATH.teachersAdd,
+        element:<TeachersCrud/>,
+    },
+    {
+        id:7,
+        path:PATH.teachersMore,
+        element:<TeachersMore/>,
+    },
+    {
+        id:8,
+        path:PATH.teachersEdit,
+        element:<TeachersCrud/>,
     }
 ]

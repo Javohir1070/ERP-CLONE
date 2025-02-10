@@ -21,7 +21,17 @@
   font-weight: 700;
   src: url('./assets/Fonts/livvic-v14-latin-700.woff2') format('woff2'); 
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 :root{
   --color-main:#bc8e5b;
 }
@@ -29,6 +39,7 @@
 body{
   font-family: "livvic", sans-serif ;
   background-color: #f1f0ee;
+  overflow:hidden;
 }
 .main-color, .ant-spin-dot-holder{
   color: var(--color-main) !important;
