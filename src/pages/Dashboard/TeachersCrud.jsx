@@ -4,7 +4,7 @@ import CrudCaption from '../../components/CrudCaption'
 import FilterCustom from '../../components/FilterCustom'
 import { Create, Edit } from '../../service/Auth'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Toaster } from 'react-hot-toast'
+import { Toaster, toast } from 'react-hot-toast'
 import GetRequest from '../../service/GetRequest'
 
 const TeachersCrud = () => {
@@ -39,11 +39,11 @@ const TeachersCrud = () => {
     const data = { name,surname,age,stackId,stack,region,regionId,district,status,statusId,experience,gender,email,phone,isMerried,study,workCompany, workCompanyId }
     if(id){
       data.id = id
-      Edit(data, `/teachers/${id}`, setIsLoading, navigate)
+      Edit(data, `/teachers/${id}`, setIsLoading, navigate, toast)
 
     }
     else{
-      Create(data, "/teachers", setIsLoading, navigate)
+      Create(data, "/teachers", setIsLoading, navigate, toast)
     }
   }
 
@@ -74,7 +74,7 @@ const TeachersCrud = () => {
   return (
     <form onSubmit={handleAddTeacher} autoComplete='off' className='p-5'>
       <Toaster position="top-center" reverseOrder={false} />
-      <CrudCaption isLoading={isloading} title={"Ustoz qo'shish"}/>
+      <CrudCaption id={id} isLoading={isloading} title={`Ustoz ${id ? "tahrirlash" : "qo'shish"}`}/>
       <div className='flex justify-around mt-10'>
         <div className='w-[40%] space-y-4'>
           <Input value={name}   onChange={(e) => setName(e.target.value)} required size='large' placeholder='Ism Kiriting'  allowClear/>

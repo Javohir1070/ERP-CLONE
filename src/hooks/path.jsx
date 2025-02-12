@@ -1,10 +1,11 @@
 export const PATH = {
     home:"/",
-    market:"/market",
-    groups:"/groups",
     teachers:"/teachers",
     teachersAdd:"/teachers/add",
     teachersMore:"/teachers/:id",
     teachersEdit:"/teachers/:id/edit",
-    students:"/students"
+    students:"/students",
+    market:"/market",
+    stack:"/stack",
+    group:"/stack/:stackId"
 } 

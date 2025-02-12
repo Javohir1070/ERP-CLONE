@@ -60,13 +60,12 @@ const Teachers = () => {
       },1000)
     }
   }
-
   // Search Part
   getTeachers(stackId, refresh, setTeachers, teachers)
 
   return (
     <div className='p-5'>
-      <Caption addLink={PATH.teachersAdd} title={"Ustozlar"} icon={<UserAddOutlined/>} count={3}/>
+      <Caption addLink={PATH.teachersAdd} title={"Ustozlar"} icon={<UserAddOutlined/>} count={teachers.length}/>
       <div className='mt-5 flex gap-10'>
           <label className='flex flex-col'>
             <span className='text-[15px] text-slate-400 pl-1 mb-1'>Qidirish</span>
